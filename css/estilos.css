@@ -10,11 +10,13 @@
 }
 
 * {
+
+
   box-sizing: border-box;
 }
 
 html {
-  font-size: 100%; /* 1rem = 16px por defecto */
+  font-size: 100%;
 }
 
 body {
@@ -24,12 +26,15 @@ body {
   background-color: var(--color-fondo);
   line-height: 1.6;
 }
+
+
 img,
 svg {
   max-width: 100%;
   height: auto;
   display: block;
 }
+
 
 h1, h2, h3 {
   font-family: var(--fuente-base);
@@ -44,7 +49,7 @@ h3 { font-size: 1.375rem; margin-bottom: 0.5rem; }
 
 p {
   margin: 0 0 1rem;
-  max-width: 68ch; /* líneas cortas: se leen mejor */
+  max-width: 68ch;
 }
 
 small,
@@ -65,15 +70,18 @@ a:focus {
   text-decoration-color: var(--color-acento-2);
 }
 
+
 a:focus,
 button:focus {
   outline: 3px solid var(--color-acento-2);
   outline-offset: 2px;
 }
 
+
 .clear {
   clear: both;
 }
+
 
 .seccion {
   width: 90%;
@@ -81,6 +89,8 @@ button:focus {
   margin: 0 auto;
   padding: 3rem 0;
 }
+
+
 
 header {
   background-color: var(--color-fondo-oscuro);
@@ -111,6 +121,7 @@ nav ul {
   padding: 0;
 }
 
+
 nav li {
   display: inline-block;
   margin: 0 0.75rem;
@@ -129,6 +140,7 @@ nav a:focus {
   border-bottom-color: var(--color-acento);
 }
 
+
 .seccion--hero {
   background-color: var(--color-fondo-oscuro);
   color: var(--color-texto-claro);
@@ -144,16 +156,6 @@ nav a:focus {
 .seccion--hero p {
   color: var(--color-texto-claro);
   opacity: 0.9;
-}
-
-.hero-texto {
-  float: left;
-  width: 58%;
-}
-
-.hero-figura {
-  float: right;
-  width: 36%;
 }
 
 .boton {
@@ -172,6 +174,8 @@ nav a:focus {
   color: var(--color-texto-claro);
 }
 
+
+
 article h3 {
   margin-top: 2rem;
 }
@@ -184,22 +188,27 @@ article li {
   margin-bottom: 0.5rem;
 }
 
+
 .video-fluido {
   position: relative;
   width: 100%;
-  padding-top: 56.25%;
-  background-color: #000;
-  margin-bottom: 1.5rem;
+  max-width: 400px;        
+  aspect-ratio: 9 / 16;    
+  margin: 0 auto;          
+  overflow: hidden;
+  border-radius: 12px;
+  background: #000;
 }
 
 .video-fluido iframe {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
   border: 0;
+  display: block;
 }
+
 
 #galeria {
   font-size: 0;
@@ -210,7 +219,7 @@ article li {
   width: 31.33%;
   margin: 0 1% 2rem;
   vertical-align: top;
-  background-color: var(--color-fondo-oscuro);
+  background-color: #ffffff;
   padding: 0.75rem;
 }
 
@@ -219,6 +228,8 @@ article li {
   color: var(--color-texto);
   font-size: 0.875rem;
 }
+
+
 
 .seccion--contacto {
   text-align: center;
