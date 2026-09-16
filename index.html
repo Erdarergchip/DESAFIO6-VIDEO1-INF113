@@ -3,21 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Más Allá del Átomo — Podcast de ciencia y ética</title>
-  <meta name="description" content="Más Allá del Átomo: un podcast sobre computación cuántica, inteligencia artificial y las preguntas éticas que abren.">
-  <link rel="stylesheet" href="css/styles.css">
+  <title>Más Allá del Átomo — Computación cuántica, IA y ética</title>
+  <meta name="description" content="Un recorrido propio por la computación cuántica, la inteligencia artificial y las preguntas éticas que abren.">
+  <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
+
   <header id="tope">
     <p class="marca">Más Allá <span>del Átomo</span></p>
-    <p class="eslogan">Ciencia, tecnología y las preguntas que vienen después.</p>
+    <p class="eslogan">Computación cuántica, inteligencia artificial y las preguntas que vienen después.</p>
 
     <nav>
       <ul>
         <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#episodio">Episodio</a></li>
+        <li><a href="#conocimiento">Conocimiento</a></li>
+        <li><a href="#cuantica">Cuántica</a></li>
+        <li><a href="#ia">Inteligencia Artificial</a></li>
+        <li><a href="#etica">Ética</a></li>
         <li><a href="#galeria">Galería</a></li>
-        <li><a href="#equipo">Equipo</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
     </nav>
@@ -28,8 +31,8 @@
     <section id="inicio" class="seccion seccion--hero">
       <div class="hero-texto">
         <h1>Lo que la física cuántica y la IA nos obligan a repensar</h1>
-        <p>Más Allá del Átomo conversa con científicos y pensadores sobre computación cuántica, inteligencia artificial y el terreno, cada vez más difuso, entre la tecnología y la ética. Cada episodio parte de una pregunta grande y trata de bajarla a tierra.</p>
-        <p><a class="boton" href="#episodio">Escuchar el episodio 1</a></p>
+        <p>Esta página reúne lo que investigamos sobre computación cuántica e inteligencia artificial, y por qué ambas nos están empujando hacia un terreno que ya no es solo técnico, sino ético. La idea es simple: bajar temas grandes a un lenguaje que cualquiera pueda seguir.</p>
+        <p><a class="boton" href="#conocimiento">Empezar a leer</a></p>
       </div>
       <div class="hero-figura">
         <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustración de un átomo con electrones orbitando">
@@ -45,37 +48,65 @@
       <div class="clear"></div>
     </section>
 
-    <!-- ============ EPISODIO ============ -->
-    <section id="episodio" class="seccion">
-      <h2>Episodio 1: El siglo de la ética</h2>
+    <section id="conocimiento" class="seccion">
+      <h2>Qué sabemos realmente del mundo cuántico</h2>
+      <article>
+        <p>Uno de los malentendidos más comunes sobre la física cuántica es pensar que describe cómo es el universo. En realidad describe algo más modesto: qué tan segura es la información que tenemos sobre él. Hay una diferencia importante entre lo que las cosas son y lo que nosotros, con nuestros instrumentos y observaciones, podemos llegar a saber de ellas.</p>
+        <p>Ese matiz explica por qué el experimento mental del gato de Schrödinger suele contarse mal. La teoría no dice que un objeto esté en dos estados a la vez de forma literal; dice que, mientras no lo observamos, nuestra información sobre él es una mezcla de posibilidades. Al medir, esa incertidumbre se actualiza y se convierte en un dato concreto.</p>
+        <p>En otras palabras: la mecánica cuántica es profundamente humilde. No promete certezas sobre la realidad última de las cosas, sino un marco para trabajar con la probabilidad y la información parcial.</p>
+      </article>
+    </section>
 
+    <section id="cuantica" class="seccion">
+      <h2>La carrera hacia una computadora que no falle</h2>
       <article class="reproductor">
+        <p>Construir una computadora cuántica útil no es solo un problema de diseño, es un problema de fragilidad. Los qubits —la unidad mínima de información cuántica— se alteran con cualquier vibración, cambio de temperatura o interferencia externa, un fenómeno conocido como decoherencia.</p>
+        <p>Por eso el verdadero punto de inflexión de esta tecnología no es tener más qubits, sino que cada operación sea casi perfecta: se habla de umbrales de fidelidad por encima del 99.9% como la puerta de entrada a algoritmos capaces de corregir sus propios errores. Superar ese umbral es lo que permitiría, más adelante, aplicaciones como el diseño de nuevos materiales o medicamentos por simulación directa, en vez de prueba y error.</p>
+        <p>Vale aclarar algo que se suele pasar por alto: una computadora cuántica no es "mejor" en todo. Para una operación simple es, de hecho, mucho más lenta que una computadora convencional. Su ventaja aparece en problemas con un número extremadamente grande de posibilidades, como simular el comportamiento de una molécula.</p>
+
         <div class="video-fluido">
           <iframe
             src="https://www.youtube.com/embed/VIDEO_ID_AQUI"
-            title="Más Allá del Átomo — Episodio 1: El siglo de la ética"
+            title="Video explicativo: cómo funciona una computadora cuántica"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen>
           </iframe>
         </div>
-
-        <h3>Notas del episodio</h3>
-        <p>Conversamos con José Ignacio Latorre, director del Center for Quantum Technologies de Singapur, sobre cómo la computación cuántica y la inteligencia artificial están dejando de ser simples herramientas para volverse la base desde la que entendemos la realidad. Latorre plantea que, después de los siglos dedicados a la mecánica, la química y la información, lo que viene es un siglo centrado en la ética.</p>
-        <ul>
-          <li>00:00 — Qué sabemos realmente del mundo cuántico (y qué es solo nuestra ignorancia disfrazada de ciencia)</li>
-          <li>10:20 — La regla de los "cuatro nueves": qué tan cerca están las máquinas cuánticas de corregir sus propios errores</li>
-          <li>22:45 — "Constanza": por qué cada vez más jóvenes eligen hablar primero con una inteligencia artificial</li>
-          <li>33:10 — ¿Puede un algoritmo neutral ayudar a auditar la corrupción?</li>
-          <li>41:30 — Automatización, trabajo y una propuesta para repartir sus beneficios en tres partes</li>
-        </ul>
-        <p>Una idea que se repite en toda la charla: la mecánica cuántica no describe el universo en sí, sino el conocimiento parcial que tenemos de él. Como resume Latorre, <q>ciencia es poder</q>, y el poder sin una brújula ética puede volverse en contra de quien lo tiene.</p>
+        <p><small>Video de apoyo sobre el funcionamiento básico de un procesador cuántico.</small></p>
       </article>
     </section>
 
-    <!-- ============ GALERÍA ============ -->
+    <section id="ia" class="seccion">
+      <h2>Cuando la inteligencia artificial se vuelve compañía</h2>
+      <article>
+        <p>La inteligencia artificial dejó de limitarse a resolver cálculos: hoy también ocupa un espacio emocional. Cada vez más jóvenes recurren a un asistente de IA como su primer confidente, antes que a un amigo o un familiar, porque está siempre disponible, no juzga y recuerda cada conversación anterior.</p>
+        <p>Ese cambio trae usos concretos que ya se están explorando:</p>
+        <ul>
+          <li>Sistemas que perciben el entorno (ruido, luz, señales de bienestar) y detectan un cambio de ánimo antes que la propia persona.</li>
+          <li>Herramientas de acompañamiento para personas mayores que viven solas, como apoyo frente a la soledad no deseada.</li>
+          <li>Asistentes que cruzan información real para ayudar a organizar encuentros o decisiones, en vez de depender de lo que alguien proyecta en una red social.</li>
+        </ul>
+        <p>El desafío no es solo técnico: es entender qué significa que una máquina ocupe un rol que antes era exclusivamente humano.</p>
+      </article>
+    </section>
+
+    <section id="etica" class="seccion">
+      <h2>Poder, algoritmos y el futuro del trabajo</h2>
+
+      <article>
+        <h3>¿Puede un algoritmo ayudar a auditar la corrupción?</h3>
+        <p>Una idea que circula cada vez más es usar sistemas de IA como una capa de auditoría neutral en decisiones públicas, por ejemplo en la contratación del Estado. La propuesta no es que una máquina decida por las personas, sino que, si un funcionario se aparta de lo que la herramienta técnica recomienda, esté obligado a justificarlo públicamente. Esa exigencia de transparencia, por sí sola, podría desalentar buena parte de la corrupción.</p>
+      </article>
+
+      <article>
+        <h3>Automatización: repartir sus beneficios, no solo sus costos</h3>
+        <p>La automatización avanza más rápido que las reformas necesarias para sostenerla. Una manera de pensar el problema es dividir en tres partes lo que las máquinas generan: un fondo para sostener pensiones y empleos desplazados, un fondo para mantener la tecnología funcionando, y una parte para seguir incentivando la innovación. Bajo esa lógica, una renta básica universal deja de ser una idea puramente ideológica y pasa a ser una respuesta práctica a un sistema que necesita cada vez menos trabajo humano para producir lo mismo.</p>
+      </article>
+    </section>
+
     <section id="galeria" class="seccion">
-      <h2>Imágenes del episodio</h2>
-      <p>Ilustraciones curadas para acompañar los temas de esta conversación.</p>
+      <h2>Imágenes del recorrido</h2>
+      <p>Ilustraciones propias para acompañar los temas de esta página.</p>
 
       <figure class="item-galeria">
         <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustración de un qubit en superposición de dos estados">
@@ -118,45 +149,15 @@
       <div class="clear"></div>
     </section>
 
-    <!-- ============ EQUIPO ============ -->
-    <section id="equipo" class="seccion">
-      <h2>Quiénes hacen el podcast</h2>
-
-      <article class="perfil">
-        <svg class="perfil-foto" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Retrato ilustrado de Camila Rojas">
-          <rect width="100" height="100" fill="#2BA6A4"/>
-          <circle cx="50" cy="40" r="18" fill="#F5F3EE"/>
-          <rect x="25" y="62" width="50" height="38" rx="16" fill="#F5F3EE"/>
-        </svg>
-        <h3>Camila Rojas</h3>
-        <p>Conductora y guionista. Estudió física y desde hace cuatro años traduce papers e investigaciones sobre computación cuántica en conversaciones que cualquiera puede seguir.</p>
-      </article>
-
-      <article class="perfil">
-        <svg class="perfil-foto" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Retrato ilustrado de Marco Fuentes">
-          <rect width="100" height="100" fill="#E3A008"/>
-          <circle cx="50" cy="40" r="18" fill="#0B1830"/>
-          <rect x="25" y="62" width="50" height="38" rx="16" fill="#0B1830"/>
-        </svg>
-        <h3>Marco Fuentes</h3>
-        <p>Productor técnico. Edita el audio de cada episodio y se encarga de invitar a especialistas en física, computación y filosofía de la tecnología.</p>
-      </article>
-
-      <div class="clear"></div>
-    </section>
-
-    <!-- ============ CONTACTO ============ -->
     <section id="contacto" class="seccion seccion--contacto">
       <h2>Escríbenos</h2>
-      <p>¿Tienes una pregunta para el próximo episodio o quieres sugerir un tema? Escríbenos a <a href="mailto:hola@masalladelatomo.com">hola@masalladelatomo.com</a>.</p>
-      <p>También puedes encontrarnos en tu plataforma de audio favorita buscando "Más Allá del Átomo".</p>
+      <p>¿Tienes una pregunta, una corrección o querés sugerir una fuente sobre estos temas? Escríbenos a <a href="mailto:hola@masalladelatomo.com">hola@masalladelatomo.com</a>.</p>
     </section>
 
   </main>
 
-  <!-- ============ PIE DE PÁGINA ============ -->
   <footer>
-    <p>Más Allá del Átomo — contenido curado con apoyo de herramientas de inteligencia artificial generativa para la síntesis de notas e ilustraciones.</p>
+    <p>Más Allá del Átomo — página elaborada a partir de investigación propia, con apoyo de herramientas de inteligencia artificial generativa para la curaduría y síntesis del contenido.</p>
     <p><a href="#tope">Volver arriba</a></p>
   </footer>
 

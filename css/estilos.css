@@ -1,0 +1,292 @@
+/* ============================================================
+   MÁS ALLÁ DEL ÁTOMO — Hoja de estilos
+   Maquetación 100% fluida: solo %, inline-block, float+clearfix
+   y max-width. Sin Flexbox, sin Grid, sin @media, sin JS.
+   ============================================================ */
+
+/* ---------- 1. Base y variables ---------- */
+
+:root {
+  --color-fondo:        #F5F3EE; /* pergamino cálido: fondo principal */
+  --color-fondo-oscuro: #0B1830; /* azul espacio profundo: header/footer/hero */
+  --color-superficie:   #16233D; /* azul un poco más claro: tarjetas oscuras */
+  --color-texto:        #1B2A4A; /* tinta azul: texto de cuerpo sobre fondo claro */
+  --color-texto-claro:  #F5F3EE; /* texto sobre fondos oscuros */
+  --color-acento:       #E3A008; /* ámbar: botones y detalles */
+  --color-acento-2:     #2BA6A4; /* verde azulado: enlaces y detalles secundarios */
+  --fuente-base: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+* {
+  /* box-sizing: border-box hace que el padding y el borde se
+     descuenten del ancho declarado, en vez de sumarse a él.
+     Esto es clave para que los porcentajes de ancho cuadren. */
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%; /* 1rem = 16px por defecto */
+}
+
+body {
+  margin: 0;
+  font-family: var(--fuente-base);
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+  line-height: 1.6;
+}
+
+/* Elementos multimedia siempre fluidos: nunca más anchos que su
+   contenedor, y mantienen su proporción alto/ancho. */
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ---------- 2. Escala tipográfica ---------- */
+
+h1, h2, h3 {
+  font-family: var(--fuente-base);
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0 0 1rem;
+}
+
+h1 { font-size: 2.75rem; }
+h2 { font-size: 2rem;    margin-bottom: 1.5rem; }
+h3 { font-size: 1.375rem; margin-bottom: 0.5rem; }
+
+p {
+  margin: 0 0 1rem;
+  max-width: 68ch; /* líneas cortas: se leen mejor */
+}
+
+small,
+figcaption {
+  font-size: 0.875rem;
+}
+
+a {
+  color: var(--color-texto);
+  text-decoration: underline;
+  text-decoration-color: var(--color-acento);
+  text-decoration-thickness: 2px;
+}
+
+a:hover,
+a:focus {
+  color: var(--color-acento-2);
+  text-decoration-color: var(--color-acento-2);
+}
+
+/* Contorno visible al navegar con teclado (accesibilidad) */
+a:focus,
+button:focus {
+  outline: 3px solid var(--color-acento-2);
+  outline-offset: 2px;
+}
+
+/* ---------- 3. Utilidades fluidas ---------- */
+
+/* Ancla usada por "clear" en el HTML: obliga a un contenedor con
+   hijos flotados a volver a "notar" su altura real. */
+.clear {
+  clear: both;
+}
+
+/* Contenedor centrado de ancho fluido: ocupa el 90% del viewport
+   pero nunca supera 1100px, para que en pantallas grandes las
+   líneas de texto no se vuelvan interminables. */
+.seccion {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+
+/* ---------- 4. Encabezado y navegación ---------- */
+
+header {
+  background-color: var(--color-fondo-oscuro);
+  color: var(--color-texto-claro);
+  text-align: center;
+  padding: 2rem 5%;
+}
+
+header .marca {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+header .marca span {
+  color: var(--color-acento);
+}
+
+header .eslogan {
+  margin: 0.25rem 0 1.5rem;
+  color: var(--color-texto-claro);
+  opacity: 0.85;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* "display: inline-block" es la alternativa fluida a Flexbox
+   para poner elementos en fila: cada <li> se comporta como un
+   bloque, pero fluye horizontalmente como el texto. */
+nav li {
+  display: inline-block;
+  margin: 0 0.75rem;
+}
+
+nav a {
+  color: var(--color-texto-claro);
+  text-decoration: none;
+  padding: 0.5rem 0.25rem;
+  border-bottom: 2px solid transparent;
+}
+
+nav a:hover,
+nav a:focus {
+  color: var(--color-texto-claro);
+  border-bottom-color: var(--color-acento);
+}
+
+/* ---------- 5. Sección de inicio (hero) ---------- */
+
+.seccion--hero {
+  background-color: var(--color-fondo-oscuro);
+  color: var(--color-texto-claro);
+  max-width: none;
+  width: 100%;
+  padding: 4rem 5%;
+}
+
+.seccion--hero h1 {
+  color: var(--color-texto-claro);
+}
+
+.seccion--hero p {
+  color: var(--color-texto-claro);
+  opacity: 0.9;
+}
+
+/* Dos columnas fluidas con float: el texto ocupa un poco más de
+   la mitad y la ilustración el resto. Al ser porcentajes, ambas
+   se reducen proporcionalmente en pantallas angostas. */
+.hero-texto {
+  float: left;
+  width: 58%;
+}
+
+.hero-figura {
+  float: right;
+  width: 36%;
+}
+
+.boton {
+  display: inline-block;
+  background-color: var(--color-acento);
+  color: var(--color-texto); /* azul oscuro sobre ámbar: buen contraste */
+  text-decoration: none;
+  padding: 0.75em 1.5em;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+.boton:hover,
+.boton:focus {
+  background-color: var(--color-acento-2);
+  color: var(--color-texto-claro);
+}
+
+/* ---------- 6. Artículos, listas y video fluido ---------- */
+
+article h3 {
+  margin-top: 2rem;
+}
+
+article ul {
+  padding-left: 1.25rem;
+}
+
+article li {
+  margin-bottom: 0.5rem;
+}
+
+/* Truco clásico para insertar un iframe de proporción 16:9 sin
+   Media Queries: el contenedor fija su alto como un porcentaje
+   de su propio ancho (56.25% = 9/16), y el iframe se estira
+   dentro de él con position: absolute. */
+.video-fluido {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  background-color: #000;
+  margin-bottom: 1.5rem;
+}
+
+.video-fluido iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ---------- 7. Galería ---------- */
+
+/* font-size: 0 en el contenedor elimina el pequeño espacio en
+   blanco que el navegador deja entre elementos inline-block
+   (viene de los saltos de línea del HTML). Los hijos recuperan
+   su tamaño de letra normal porque lo declaran en rem. */
+#galeria {
+  font-size: 0;
+}
+
+.item-galeria {
+  display: inline-block;
+  width: 31.33%;
+  margin: 0 1% 2rem;
+  vertical-align: top;
+  background-color: var(--color-fondo-oscuro);
+  padding: 0.75rem;
+}
+
+.item-galeria figcaption {
+  margin-top: 0.5rem;
+  color: var(--color-texto);
+  font-size: 0.875rem;
+}
+
+/* ---------- 8. Contacto y pie de página ---------- */
+
+.seccion--contacto {
+  text-align: center;
+  padding-top: 1rem;
+}
+
+footer {
+  background-color: var(--color-fondo-oscuro);
+  color: var(--color-texto-claro);
+  text-align: center;
+  padding: 2rem 5%;
+}
+
+footer p {
+  max-width: none;
+  margin: 0 auto 0.5rem;
+  opacity: 0.85;
+}
+
+footer a {
+  color: var(--color-texto-claro);
+  text-decoration-color: var(--color-acento);
+}
